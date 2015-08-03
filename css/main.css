@@ -14,11 +14,18 @@ header {
   padding-bottom: 10px;
   margin-bottom: 20px; }
 
+.shopping-list li {
+  text-align: left;
+  border: 3px solid #999;
+  padding: 20px;
+  margin: 5px; }
+
 .done {
   background-color: #27ae60;
   color: #FFF; }
 
-#list li {
+.thing {
+  color: green;
   text-align: left;
   border: 3px solid #999;
   padding: 20px;
