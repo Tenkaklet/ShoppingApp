@@ -18,7 +18,8 @@ header {
   text-align: left;
   border: 3px solid #999;
   padding: 20px;
-  margin: 5px; }
+  margin: 5px;
+  border-radius: 5px; }
 
 .completed {
   background-color: #27ae60;
