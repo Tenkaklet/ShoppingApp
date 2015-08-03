@@ -24,6 +24,9 @@ header {
   background-color: #27ae60;
   color: #FFF; }
 
+.test {
+  background-color: purple; }
+
 .thing {
   color: green;
   text-align: left;
