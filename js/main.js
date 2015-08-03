@@ -1,7 +1,8 @@
 $(document).ready(function(){
-	$('#add').click(function(){
-		$('#list').append('<li class="thing">' + $('#item').val() + '</li>');
-		$('#item').val();
+	$('#add').click(function(){		
+		if ($('#item').val() !== "") {
+			$('#list').append('<li class="thing">' + $('#item').val() + '</li>');
+		}
 	});
 	$(document).keyup(function(keypressed) {
 		if (keypressed.keyCode === 13) {
