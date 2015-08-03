@@ -4,8 +4,8 @@ $(document).ready(function(){
 			$('#list').append('<li class="thing">' + $('#item').val() + '</li>');
 		}
 	});
-	$(document).keyup(function(keypressed) {
-		if (keypressed.keyCode === 13) {
+	$(document).keydown(function(){
+		if (event.which === 13) {
 			$('#add').trigger('click');
 		}
 	});
