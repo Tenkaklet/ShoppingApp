@@ -9,7 +9,7 @@ $(document).ready(function(){
 			$('#add').trigger('click');
 		}
 	});
-	$('#delete').click(function(){
-		$('#list li:last-child').remove();
+	$('#remove-completed').click(function(){
+		$('#list li.completed').remove();
 	});
 });
