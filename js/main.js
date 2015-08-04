@@ -16,11 +16,11 @@ $(document).ready(function() {
 		$('#list li.completed').remove();
 	});
 
-	$('.single-remove').click(function() {
+	$('#list').on('click', '.single-remove', function() {		
 		$(this).parent().remove();
 	});
 
-	$('.done').click(function(){
+	$('#list').on('click', '.done' , function(){
 		$(this).parent().toggleClass('completed');
 	});
 
