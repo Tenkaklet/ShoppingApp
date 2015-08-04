@@ -1,25 +1,33 @@
 $(document).ready(function() {
+
+	// Add inputed item
 	$('#add').click(function() {		
 		if ($('#item').val() !== "") {
 			$('#list').append('<li><button class="btn btn-xs btn-danger single-remove">delete</button> <button class="btn btn-xs btn-primary done">Done</button> ' + $('#item').val() + '</li>');
 			$('#item').val('');
+			$('#item').slideDown(600);
 		}
 	});
-
+	// Same as above but by pressing "enter"
 	$(document).keydown(function() {
 		if (event.which === 13) {
 			$('#add').trigger('click');
 		}
 	});
 
+	// Remove completed tasks
 	$('#remove-completed').click(function() {
 		$('#list li.completed').remove();
 	});
 
+	// Remove indivual item
 	$('#list').on('click', '.single-remove', function() {		
-		$(this).parent().remove();
+		$(this).parent().hide(1000, function(){
+			$(this).remove();
+		});		
 	});
 
+	// User defines completed or ongoing task
 	$('#list').on('click', '.done' , function(){
 		$(this).parent().toggleClass('completed');
 	});
