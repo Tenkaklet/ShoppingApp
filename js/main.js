@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$('#remove-completed').hide();
+
 	// Add inputed item
 	$('#add').click(function() {		
 		if ($('#item').val() !== "") {
@@ -19,6 +21,14 @@ $(document).ready(function() {
 
 	// Remove completed tasks
 	$('#remove-completed').click(function() {
+		if ($('li').size() <= 1) {
+			console.log($('li').size());
+		$('#remove-completed').hide();
+		console.log('remove hidden');
+	} else {
+		$('#remove-completed').show();
+		console.log('remove show');
+	}
 		$('#list li.completed').hide(400, function(){
 			$(this).remove();
 		});
@@ -36,10 +46,6 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('completed');
 	});
 
-	if ($('#list').val() === "") {
-		$('#remove-completed').hide();
-	} else {
-		$('#remove-completed').show();
-	}
+
 
 });
