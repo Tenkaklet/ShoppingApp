@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-	if ($('#list').val() === "") {
-		$('#remove-completed').hide();
-	} else {
-		$('#remove-completed').show();
-	}
-
 	// Add inputed item
 	$('#add').click(function() {		
 		if ($('#item').val() !== "") {
@@ -41,5 +35,11 @@ $(document).ready(function() {
 	$('#list').on('click', '.done' , function(){
 		$(this).parent().toggleClass('completed');
 	});
+
+	if ($('#list').val() === "") {
+		$('#remove-completed').hide();
+	} else {
+		$('#remove-completed').show();
+	}
 
 });
