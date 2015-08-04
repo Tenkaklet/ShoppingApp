@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 	if ($('#list').val() === "") {
 		$('#remove-completed').hide();
+	} else {
+		$('#remove-completed').show();
 	}
 
 	// Add inputed item
