@@ -38,6 +38,14 @@ input {
   margin: 5px;
   border-radius: 5px; }
 
+#remove-completed {
+  color: #2C3E50;
+  transition: all 0.2s ease-in-out; }
+  #remove-completed:hover {
+    color: #18BEBA;
+    text-decoration: none;
+    cursor: pointer; }
+
 .completed {
   background-color: #27ae60;
   color: #FFF;
