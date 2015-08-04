@@ -1,5 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Basic);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
 body {
   background-color: #ecf0f1; }
+
+p {
+  font-family: 'Basic', sans-serif;
+  font-size: 13px;
+  margin: 10px; }
 
 #wrapper {
   background-color: transparent;
@@ -9,6 +16,9 @@ header {
   padding: 20px;
   text-align: center;
   margin-bottom: 20px; }
+  header h1 {
+    font-family: 'Poiret One', sans-serif;
+    font-weight: bold; }
   header .tagline {
     width: 40%;
     margin: 0 auto; }
@@ -16,6 +26,10 @@ header {
 .input-area {
   padding-bottom: 10px;
   margin-bottom: 20px; }
+
+input {
+  height: 30px;
+  border: 2px solid #999; }
 
 .shopping-list li {
   text-align: left;
@@ -26,7 +40,8 @@ header {
 
 .completed {
   background-color: #27ae60;
-  color: #FFF; }
+  color: #FFF;
+  transition: all 0.2s ease; }
 
 .thing {
   color: green;
@@ -34,3 +49,7 @@ header {
   border: 3px solid #999;
   padding: 20px;
   margin: 5px; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .tagline {
+    width: 100% !important; } }
